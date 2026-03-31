@@ -31,3 +31,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.content {
+  display: flex;
+  lex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex: 1;
+}
