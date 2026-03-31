@@ -27,10 +27,24 @@ img {
 
 /* my solution */
 
-body{
+body {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.plant {
+  max-width: 200px;
+}
+
+text {
+  text-justify: center;
 }
