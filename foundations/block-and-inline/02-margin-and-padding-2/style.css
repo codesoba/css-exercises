@@ -30,3 +30,8 @@ button {
   font-size: 18px;
   padding: 8px;
 }
+
+.content {
+  margin-bottom: 8px;
+  padding: 16px 8px;
+}
