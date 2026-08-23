@@ -44,4 +44,5 @@ button {
 button {
   display: block; /* forces the button (inline) to behave like a block */
   margin: 0 auto; /* centers that block box horizontally */
+  padding: 8px 24px;
 }
