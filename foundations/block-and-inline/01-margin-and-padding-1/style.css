@@ -26,6 +26,5 @@ body {
   width: 200px;
   /* CHANGE ME */
   padding: 0px;
-  margin-left: 0px;
-}
+  margin-left: auto; /* margin-left: auto fills the leftover space left by the fixed 200px width, pushing the div right */
 
