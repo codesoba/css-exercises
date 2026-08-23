@@ -18,3 +18,9 @@ body {
 button {
   background: white;
 }
+
+/* Changes are below that */
+
+.card {
+  padding: 8px;
+}
