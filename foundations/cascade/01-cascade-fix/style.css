@@ -8,20 +8,9 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .para {
   font-size: 22px;
 }
-
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,14 +18,39 @@ body {
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
 }
+
+/* specificity noted as (id, class, type) below, per MDN's notation:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity
+   (not the terminology Odin Project's cascade lesson uses, but helped me understand that better) */
+
+/* moved below .para: same specificity (0,1,0) as .para, so source
+   order now decides and this rule wins instead of losing to it */
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* replaced .confirm with an ID selector: an ID (1,0,0)
+   beats .button's class specificity (0,1,0) outright so there is no
+   reordering needed */
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* replaced .child with div.child and moved it below div.text: alone,
+   .child (0,1,0) was weaker than div.text (0,1,1) and always lost.
+   Adding the div type selector ties the specificity at (0,1,1), so
+   moving it after div.text lets source order make this one win */
+div.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+
