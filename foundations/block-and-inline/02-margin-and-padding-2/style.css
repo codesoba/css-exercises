@@ -40,3 +40,7 @@ button {
   text-align: center;
   padding: 8px;
 }
+
+button {
+  display: block; /* forces the button (inline) to behave like a block */
+}
